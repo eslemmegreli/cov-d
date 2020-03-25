@@ -1,0 +1,105 @@
+/****************************************************************************
+**                          SAKARYA ÜNİVERSİTESİ
+**               BİLGİSAYAR VE BİLİŞİM BİLİMLERİ FAKÜLTESİ
+**                 BİLİŞİM SİSTEMLERİ MÜHENDİSLİĞİ BÖLÜMÜ
+**                   NESNEYE DAYALI PROGRAMLAMA DERSİ
+**                       2019-2020 BAHAR DÖNEMİ
+**
+**                    ÖDEV NUMARASI..........:1
+**                ÖĞRENCİ ADI............:AYŞE ESLEM MEĞRELİ
+**                     ÖĞRENCİ NUMARASI.......:B191200022
+**                       DERSİN ALINDIĞI GRUP...:
+****************************************************************************/
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Nesneye_Dayalı_Programlama_Ödevi
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 frnedir = new Form2(); //Yeni forma frnedir ismini verdim
+            frnedir.Show(); //yeni formu gösterir
+            this.Hide(); // Bu aşamada diğer formların kapanmasını sağladım
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form3 frtedbir = new Form3();
+            frtedbir.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form4 frbelirti = new Form4();
+            frbelirti.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "ABD")  //Burada eğer comcobox'da ABD'yi seçerse aşağıdakileri yapar
+            {
+                Form5 formabd = new Form5();
+                formabd.Show(); // yeni formu göster
+                this.Hide();  //diğer formları sil
+            }
+            if (comboBox1.Text == "ALMANYA") // Bu ve bundan sonrası için de yukarıdakini yaptım
+            {
+                Form6 formalmanya = new Form6();
+                formalmanya.Show();
+                this.Hide();
+            }
+            if (comboBox1.Text == "ÇİN")
+            {
+                Form7 formcin = new Form7();
+                formcin.Show();
+                this.Hide();
+            }
+            if (comboBox1.Text == "FRANSA")
+            {
+                Form8 formfransa = new Form8();
+                formfransa.Show();
+                this.Hide();
+            }
+            if(comboBox1.Text=="GÜNEY KORE")
+            {
+                Form9 formkore = new Form9();
+                formkore.Show();
+                this.Hide();
+            }
+            if (comboBox1.Text == "İRAN")
+            {
+                Form10 formiran = new Form10();
+                formiran.Show();
+                this.Hide();
+            }
+            if (comboBox1.Text == "İTALYA")
+            {
+                Form11 formitalya = new Form11();
+                formitalya.Show();
+                this.Hide();
+            }
+            if (comboBox1.Text == "TÜRKİYE")
+            {
+                Form12 formtürkiye = new Form12();
+                formtürkiye.Show();
+                this.Hide();
+            }
+        }
+    }
+}
